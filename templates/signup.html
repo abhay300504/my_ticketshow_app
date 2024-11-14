@@ -10,34 +10,36 @@
             <div class="center"><h1>My Cine World</h1></div>
             <div class = "my_panel">
                 <div class="center"><h3>Signup</h3></div>
+                <form action="/register" method="POST">
                 <div class = "input_form">
                     <div class="mb-3">
                         <label for="user_name" class="form-label">User Name(E-mail)</label>
-                        <input type="email" class="form-control" id="username" placeholder="iitm@study.iitm.ac.in">
+                        <input type="email" class="form-control" name="user_name" id="user_name" placeholder="iitm@study.iitm.ac.in">
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type=password" class="form-control" id="password" placeholder="password">
+                        <input type=password" class="form-control" name="password" id="password" placeholder="password">
                     </div>
                     <div class="mb-3">
                         <label for=full_name" class="form-label">Full Name</label>
-                        <input type=text" class="form-control" id="full_name" placeholder="IIT Madras">
+                        <input type=text" class="form-control" name="full_name" id="full_name" placeholder="IIT Madras">
                     </div>
                     <div class="mb-3">
                         <label for="location" class="form-label">Location</label>
-                        <input type=location" class="form-control" id="location" placeholder="Valchery Chennai-42">
-                    </div>
-                    
+                        <input type=location" class="form-control" name="location" id="location" placeholder="Valchery Chennai-42">
+                    </div>            
                     <div class="mb-3">
                         <label for="pincode" class="form-label">Pincode</label>
-                        <input type=text" class="form-control" id="pincode" placeholder="500001">
+                        <input type=text" class="form-control" name="pin_code" id="pin_code" placeholder="500001">
                     </div>
                     <div class="mb-3">
-                        <button type="button" class="btn btn-primary">Register</button>
-                        Existing User?<a href="#">Login</a>
-                    </div>
-                    
-                      
+                        <button type="submit" class="btn btn-primary">Register</button>
+                        Existing User?<a href="/login">Login</a>
+                        <div class="center">{{msg}}</div>
+                    </div>      
                 </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
